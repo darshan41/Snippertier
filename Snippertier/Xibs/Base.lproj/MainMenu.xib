@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="22505" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="22505"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
+            <connections>
+                <outlet property="delegate" destination="Voe-Tx-rLC" id="GzC-gU-4Uq"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Snippertier" customModuleProvider="target">
+            <connections>
+                <outlet property="controlPanel" destination="VWy-gU-DxI" id="mIm-UP-Xjh"/>
+                <outlet property="exportMenuItem" destination="zzF-nB-iIW" id="DqT-4U-cOd"/>
+                <outlet property="importMenuItem" destination="tM1-MF-q03" id="AeJ-Ma-qYa"/>
+                <outlet property="menu" destination="aw3-Gy-E3T" id="01X-5E-47c"/>
+                <outlet property="pauseMonitering" destination="fg3-a4-Cz7" id="6kI-lR-LoG"/>
+                <outlet property="quitApp" destination="rE6-Lu-gWy" id="zaW-ax-rLy"/>
+            </connections>
+        </customObject>
+        <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+        <menu id="aw3-Gy-E3T">
+            <items>
+                <menuItem title="Open Store Panel" id="VWy-gU-DxI">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="onPressControlPanel:" target="Voe-Tx-rLC" id="qFK-v7-umG"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Pause" id="fg3-a4-Cz7">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="onTapPause:" target="Voe-Tx-rLC" id="Bfc-VZ-Qu2"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Import" id="tM1-MF-q03">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="onTapImportItem:" target="Voe-Tx-rLC" id="FQQ-79-Sp8"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Export" id="zzF-nB-iIW">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="onTapExportItem:" target="Voe-Tx-rLC" id="xe8-jj-FPC"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Quit" id="rE6-Lu-gWy">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="didTapQuit:" target="Voe-Tx-rLC" id="nd4-Gb-Hc8"/>
+                    </connections>
+                </menuItem>
+            </items>
+            <point key="canvasLocation" x="-64.5" y="68"/>
+        </menu>
+    </objects>
+</document>
