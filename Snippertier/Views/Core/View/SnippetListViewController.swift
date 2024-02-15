@@ -80,6 +80,10 @@ class SnippetListViewController: NSViewController {
 
 extension SnippetListViewController: NSTableViewDelegate {
     
+    func tableView(_ tableView: NSTableView, heightOfRow row: Int) -> CGFloat {
+        80
+    }
+    
     func tableViewSelectionDidChange(_ notification: Notification) {
         guard let tableView = notification.object as? NSTableView else {
             return
